@@ -15,8 +15,8 @@ program bereader
     integer, parameter :: r_kind = selected_real_kind(6) ! 6=single, 15=double, 20=quad
 
     ! for modifying
-    real(r_kind) :: coeff = 1
-    ! real(r_kind) :: coeff = .5
+    ! real(r_kind) :: coeff = 1
+    real(r_kind) :: coeff = .5
     !-------------------------------------------------------------------------------------
 
     character(len=*), parameter :: file_dir = '/data/users/fzhu/Tools/comGSI_v3.3_large_nmsgmax/fix/Big_Endian/'
@@ -103,7 +103,7 @@ program bereader
         else
             allocate ( corqq_avn(1:mlat,1:isig) )
             read(inerr) corz_avn, corqq_avn
-            write(99) corz_avn, corqq_avn
+            write(99) corz_avn*coeff, corqq_avn*coeff
         end if
 
         read(inerr) hwll_avn
