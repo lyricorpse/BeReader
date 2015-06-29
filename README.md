@@ -1,4 +1,4 @@
-# Background Error Corvariance File Reader
+# A Background Error Corvariance File Reader
 
 ## Introduction
 
